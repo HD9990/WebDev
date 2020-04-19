@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JavaScript</title>
+	<style type="text/css">
+
+	</style>
+	</head>
+	<body>
+
+		<input type="text" placeholder="Annual income" id="income">
+		<button type="button" onclick= myTax()>Calculate</button>
+
+
+		<script type="text/javascript">
+            function myTax() { 
+                var income = document.getElementById("income").value;
+                    switch(true){
+        			case (income<=18200):
+    	    			alert("tax due is: "+"0")
+    	    			break;   
+        			case (income<=37000):
+    	    			alert ("tax due is: "+0.19*(income-18200));
+    	    			break;   
+        			case (income<=90000):
+    	    			alert ("tax due is: "+(0.325*(income-37000)+3572));
+    	    			break;   
+        			case (income<=180000):
+    	    			alert ("tax due is: "+(0.37*(income-90000)+20797));
+    	    			break;   
+        			case (income>180000):
+    	    			alert ("tax due is: "+(0.45*(income-180000)+54096));
+    	    			break;  
+                    default:
+                        alert("invalid input, please type in a valid number")
+                        }
+				    }    
+
+		</script>
+	</body>
+
+</html>
